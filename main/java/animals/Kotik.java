@@ -1,4 +1,4 @@
-package main.java.animals;
+package  animals;
 
 import java.util.Random;
 
@@ -82,7 +82,7 @@ public class Kotik {
 
     }
 
-    public boolean walk() {
+    private boolean walk() {
         if (satiety > 0) {
             System.out.println("Котик гуляет");
             satiety--;
@@ -92,7 +92,7 @@ public class Kotik {
 
     }
 
-    public boolean hunt() {
+    private boolean hunt() {
         if (satiety > 0) {
             System.out.println("Котик охотится");
             satiety--;
@@ -102,17 +102,17 @@ public class Kotik {
 
     }
 
-    public void eat(int a) {
+    private void eat(int a) {
         System.out.println("Котик ест");
         satiety = satiety + a;
     }
 
-    public void eat(int a, String food) {
+    private void eat(int a, String food) {
         System.out.println("Котик ест " + food);
         satiety = satiety + a;
     }
 
-    public void eat() {
+    private void eat() {
         eat(1, "корм");
     }
 
@@ -132,7 +132,7 @@ public class Kotik {
                     break;
                 case 2:
                     if(!hunt()) {
-                        eat();
+                        eat(5);
                         array[i] = i + " - ел";
                     }
                     else {
