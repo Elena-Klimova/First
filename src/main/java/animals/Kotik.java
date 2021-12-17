@@ -1,3 +1,5 @@
+package  animals;
+
 import java.util.Random;
 
 public class Kotik {
