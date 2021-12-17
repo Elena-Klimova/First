@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class Kotik {
     private static final int METHODS = 5;
-    private static int kotikCount = 0;
+    public static int count;
     private String name;
     private String voice;
     private int satiety;
@@ -20,10 +20,6 @@ public class Kotik {
         this.voice = voice;
         this.satiety = satiety;
         this.weight = weight;
-    }
-    
-    public static int getKotikCount(){
-        return kotikCount;
     }
 
     public String getName() {
