@@ -132,7 +132,7 @@ public class Kotik {
                     break;
                 case 2:
                     if(!hunt()) {
-                        eat(5);
+                        eat(10);
                         array[i] = i + " - ел";
                     }
                     else {
