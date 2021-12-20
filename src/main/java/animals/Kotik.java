@@ -1,6 +1,4 @@
-package animals;
-
-import java.util.Random;
+package  animals;
 
 public class Kotik {
     private static final int METHODS = 5;
