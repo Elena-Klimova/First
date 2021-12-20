@@ -64,7 +64,6 @@ public class Kotik {
 
     public boolean play() {
         if (satiety > 0) {
-            System.out.println("Котик играет: " + voice);
             satiety--;
             return true;
         }
@@ -72,8 +71,7 @@ public class Kotik {
     }
 
     public boolean sleep() {
-        if (satiety > 0) {
-            System.out.println("Котик спит");
+        if (satiety > 0) 
             satiety--;
             return true;
         }
@@ -82,7 +80,6 @@ public class Kotik {
 
     public boolean wash() {
         if (satiety > 0) {
-            System.out.println("Котик умывается");
             satiety--;
             return true;
         }
@@ -92,7 +89,6 @@ public class Kotik {
 
     private boolean walk() {
         if (satiety > 0) {
-            System.out.println("Котик гуляет");
             satiety--;
             return true;
         }
@@ -102,7 +98,6 @@ public class Kotik {
 
     private boolean hunt() {
         if (satiety > 0) {
-            System.out.println("Котик охотится");
             satiety--;
             return true;
         }
@@ -111,7 +106,6 @@ public class Kotik {
     }
 
     private void eat(int a) {
-        System.out.println("Котик ест");
         satiety = satiety + a;
     }
 
