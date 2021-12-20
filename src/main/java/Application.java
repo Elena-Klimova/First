@@ -1,6 +1,11 @@
 import  animals.Kotik;
 
 public class Application {
+
+    public static boolean compareVoice(Kotik cat1, Kotik cat2) {
+        return cat1.getVoice().equals(cat2.getVoice());
+    }
+
     public static void main(String[] args) {
         Kotik cat1 = new Kotik("cat1", "meow", 10, 2.5f);
         Kotik cat2 = new Kotik();
@@ -17,10 +22,9 @@ public class Application {
         if (compareVoice(cat1, cat2)) {
             System.out.println("Коты одинаково разговаривают");
         }
-        System.out.println("Количество созданных экземпляров: " + Kotik.count);
+        System.out.println("Количество созданных экземпляров: " + Kotik.getCount());
     }
 
-    public static boolean compareVoice(Kotik cat1, Kotik cat2) {
-        return cat1.getVoice().equals(cat2.getVoice());
-    }
 }
+
+
