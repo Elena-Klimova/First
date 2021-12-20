@@ -18,7 +18,7 @@ public class Application {
         for (String s : temp) {
             System.out.println(s);
         }
-        System.out.printf("Name: %s%n Weight: %d%n", cat2.getName(), cat2.getWeight());
+        System.out.printf("Name: %s%n Weight: %o%n", cat2.getName(), cat2.getWeight());
         if (compareVoice(cat1, cat2)) {
             System.out.println("Коты одинаково разговаривают");
         }
