@@ -7,12 +7,12 @@ public class Application {
     }
 
     public static void main(String[] args) {
-        Kotik cat1 = new Kotik("cat1", "meow", 10, 2.5f);
+        Kotik cat1 = new Kotik("cat1", "meow", 10, 2);
         Kotik cat2 = new Kotik();
         cat2.setName("cat2");
         cat2.setVoice("meow");
         cat2.setSatiety(10);
-        cat2.setWeight(2.5f);
+        cat2.setWeight(2);
 
         String[] temp = cat1.liveAnotherDay();
         for (String s : temp) {
