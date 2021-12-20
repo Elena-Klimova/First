@@ -6,10 +6,10 @@ public class Kotik {
     private String name;
     private String voice;
     private int satiety;
-    private float weight;
+    private int weight;
 
 
-    public Kotik(String name, String voice, int satiety, float weight) {
+    public Kotik(String name, String voice, int satiety, int weight) {
         this();
         this.name = name;
         this.voice = voice;
