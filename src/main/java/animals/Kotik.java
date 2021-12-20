@@ -10,7 +10,6 @@ public class Kotik {
 
 
     public Kotik(String name, String voice, int satiety, int weight) {
-        this();
         this.name = name;
         this.voice = voice;
         this.satiety = satiety;
