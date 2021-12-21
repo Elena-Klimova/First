@@ -1,25 +1,34 @@
-package  animals;
+package animals;
 
-import java.util.Random;
-
-public class Kotik {
+public class Kotik extends Carnivorous implements Run, Swim, Voice {
     private static final int METHODS = 5;
-    public static int count;
+    private static int count = 0;
     private String name;
     private String voice;
     private int satiety;
-    private float weight;
+    private int weight;
 
-    public Kotik() {
-        count++;
-    }
 
-    public Kotik(String name, String voice, int satiety, float weight) {
+    public Kotik(String name, String voice, int satiety, int weight) {
         this();
         this.name = name;
         this.voice = voice;
         this.satiety = satiety;
         this.weight = weight;
+        count++;
+    }
+
+    public static int getCount() {
+        return count;
+    }
+
+    public static void setCount(int count) {
+        Kotik.count = count;
+    }
+
+    public Kotik() {
+        super();
+        count++;
     }
 
     public String getName() {
@@ -46,11 +55,11 @@ public class Kotik {
         this.satiety = satiety;
     }
 
-    public float getWeight() {
+    public int getWeight() {
         return weight;
     }
 
-    public void setWeight(float weight) {
+    public void setWeight(int weight) {
         this.weight = weight;
     }
 
@@ -122,47 +131,42 @@ public class Kotik {
             int method = (int) (Math.random() * METHODS) + 1;
             switch (method) {
                 case 1:
-                    if(!play()) {
+                    if (!play()) {
                         eat();
                         array[i] = i + " - ел";
-                    }
-                    else {
+                    } else {
                         array[i] = i + " - играл";
                     }
                     break;
                 case 2:
-                    if(!hunt()) {
+                    if (!hunt()) {
                         eat(8);
                         array[i] = i + " - ел";
-                    }
-                    else {
+                    } else {
                         array[i] = i + " - охотился";
                     }
                     break;
                 case 3:
-                    if(!sleep()) {
+                    if (!sleep()) {
                         eat();
                         array[i] = i + " - ел";
-                    }
-                    else {
+                    } else {
                         array[i] = i + " - спал";
                     }
                     break;
                 case 4:
-                    if(!walk()) {
+                    if (!walk()) {
                         eat();
                         array[i] = i + " - ел";
-                    }
-                    else {
+                    } else {
                         array[i] = i + " - гулял";
                     }
                     break;
                 case 5:
-                    if(!wash()) {
+                    if (!wash()) {
                         eat();
                         array[i] = i + " - ел";
-                    }
-                    else {
+                    } else {
                         array[i] = i + " - умывался";
                     }
                     break;
@@ -174,4 +178,14 @@ public class Kotik {
     }
 
 
+    @Override
+    public void run() {
+        System.out.println("Котик бежит");
+    }
+
+    @Override
+    public void swim() {
+        System.out.println("Котик плывет");
+
+    }
 }
