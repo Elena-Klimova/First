@@ -1,4 +1,4 @@
-package  animals;
+package animals;
 
 public class Fish extends Carnivorous implements Swim {
 
